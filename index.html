@@ -1,0 +1,95 @@
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Firefly</title>		
+		<link rel="icon" href="src/docs/icon.png">  
+
+
+	</head>
+
+	<body>
+
+		<div style="background-color:black; position:absolute; top:0; bottom:0; left:0; right:0;" id='loader'></div>
+
+		<div id="ContentContainer" > 
+
+			<div id="splash" onclick="hideSplash()">
+				<div id="splashdiv1">Firefly: </div>
+				<div id="splashdiv2">A WebGL tool to explore particle-based data</div>
+				<div id="splashdiv3">Aaron Geller / Alex Gurvich / Northwestern</div>
+				<div id="splashdiv4">
+					<p><b>Instructions:</b></p>
+						<ul>
+							<li>Right-click and drag with the mouse to rotate your view. </li>
+							<li>Use the mouse wheel to zoom in and out. </li>
+							<li>Click the Controls bar on the top left to show/hide a user interface.</li>
+							<li>Detailed instructions can be found on <a href="https://github.com/ageller/Firefly" target="_blank">the Firefly GitHub page.</a> </li>
+							<li><b>h</b>: toggles this help screen on and off. </li>
+						</ul>
+				</div>
+				<div id="splashdivLoader">
+					<button id='loadDataButton' class='button' onclick='loadStartup();'  style='display:none; font-size:24px; width:415px; height:50px'>
+						<span>Click here to select a data directory</span>
+					</button>
+					<button id='selectStartupButton' class='button' style='display:none; font-size:24px; width:600px; height:50px'>
+						<span>Click here to select a directory from your startup file</span>
+					</button>
+				</div>
+				<div id="splashdiv5">Loading...</div>
+			</div>
+
+
+			<div class="UIcontainer" style="visibility:hidden"> 
+
+			</div>
+
+			<div id="WebGLContainer" ></div>
+
+		</div>
+
+<!-- three.js resources -->		
+		<script src="src/resources/three.min.js"></script>
+		<script src="src/resources/Detector.js"></script>
+		<script src="src/resources/TrackballControls.js"></script>
+		<script src="src/resources/three-fly-controls.js"></script>
+		<script src="src/resources/KeyboardState.js"></script>
+		<script src="src/resources/THREEx.FullScreen.js"></script>
+		<script src="src/resources/THREEx.WindowResize.js"></script>
+		<script src="src/resources/StereoEffect.js"></script>
+<!-- https://github.com/collinhover/threeoctree -->
+		<script src="src/resources/threeoctree.min.js"></script>
+		
+		<!-- for the color picker = spectrum : https://github.com/bgrins/spectrum -->
+		<link rel="stylesheet" href="src/resources/spectrum.css" />
+		<script src="src/resources/jquery-3.2.1.min.js"></script> 
+		<script src="src/resources/spectrum.js"></script>
+
+		<!-- noUIslider for filtering -->
+		<link href="src/resources/nouislider.min.css" rel="stylesheet">
+		<script src="src/resources/nouislider.min.js"></script>
+
+		<!-- wNumb number formatter -->
+		<script src="src/resources/wNumb.js"></script>
+
+		<!-- d3 -->
+		<script src="src/resources/d3.v4.10.2.min.js"></script>
+
+		<!-- the main attraction -->
+
+		<!-- shaders -->
+		<script src="src/shaders/vertex.glsl.js"></script>
+		<script src="src/shaders/fragment.glsl.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="src/css/index.css" />
+		<script src="src/js/window_events.js"></script>
+		<script src="src/js/UI.js"></script>
+		<script src="src/js/draw.js"></script>
+		<script src="src/js/renderAll.js"></script>
+		<script src="src/js/init.js"></script>
+
+
+	</body>
+
+
+</html>
