@@ -2,8 +2,7 @@
 
 This is an interactive WebGL viewer for Gaia data, built using [Firefly](https://github.com/ageller/Firefly).  There are additional features here that have not yet been incorporated into Firefly, but are forthcoming. 
 
-A live version is available [here](https://ageller.github.io/GaiaFly/).
+A live version, showing data for the 3 millions brightest stars in Gaia, is available [here](https://ageller.github.io/GaiaFly/).
 
-For general documentation about the controls, please see the [Firefly wiki page](https://github.com/ageller/Firefly/wiki).
-
+For general documentation about the controls, please see the [Firefly wiki page](https://github.com/ageller/Firefly/wiki). 
 
