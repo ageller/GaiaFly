@@ -1235,7 +1235,7 @@ function createUI(){
 			.attr('class','UItopbar')
 			.attr('id','UItopbar')
 			.attr('onmouseup','hideUI(this);')
-			.attr('onmousedown','dragElement();');
+			.attr('onmousedown','dragElement(this, event);');
 
 		UIt.append('table');
 		var UIr1 = UIt.append('tr');
@@ -2159,10 +2159,10 @@ function savePreset()
 }
 
 //from https://www.w3schools.com/howto/howto_js_draggable.asp
-function dragElement() {
+function dragElement(elm, e) {
 	var elmnt = document.getElementsByClassName("UIcontainer")[0];
 	var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-	dragMouseDown();
+	dragMouseDown(e);
 
 
 	function dragMouseDown(e) {
@@ -2200,5 +2200,3 @@ function dragElement() {
 
 	}
 }
-
-
